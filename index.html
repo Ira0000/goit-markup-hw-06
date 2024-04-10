@@ -26,8 +26,6 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
-          <!-- ----------HEADER NAVIGATION AND LOGO------------------->
-
           <a class="header-logo" href="./index.html"
             >Web<span class="logo-second-part">Studio</span></a
           >
@@ -43,6 +41,11 @@
               <a class="header-menu-link" href="">Contacts</a>
             </li>
           </ul>
+          <button class="burger-button" type="button">
+            <svg type="burger-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+            </svg>
+          </button>
         </nav>
 
         <!-- ----------HEADER CONTACT INFO------------------->
@@ -63,10 +66,10 @@
         </address>
       </div>
     </header>
-    <main class="main">
-      <!------------------------------------------------->
-      <!-- ----------HERO SECTION------------------->
 
+    <!------------------------------------------------->
+    <!-- ----------HERO SECTION------------------->
+    <main class="main">
       <section id="hero" class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -142,12 +145,31 @@
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
             <li class="team-member">
-              <img
-                src="./images/mark.jpg"
-                alt="Mark Guerrero photo"
-                width="264"
-                height="260"
-              />
+              <picture class="team-member-picture">
+                <source
+                  srcset="
+                    ./images/desktop/mark-desk.jpg     1x,
+                    ./images/desktop/mark-desk-@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/mark-tab.jpg     1x,
+                    ./images/tab/mark-tab-@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mark-mobile.jpg     1x,
+                    ./images/mobile/mark-mobile-@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/mobile/mark-mobile.jpg" alt="Mark photo" />
+              </picture>
+
               <div class="team-member-details">
                 <h3 class="team-member-name">Mark Guerrero</h3>
                 <p class="team-member-position">Product Designer</p>
@@ -184,12 +206,30 @@
               </div>
             </li>
             <li class="team-member">
-              <img
-                src="./images/tom.jpg"
-                alt="Tom Ford photo"
-                width="264"
-                height="260"
-              />
+              <picture class="team-member-picture">
+                <source
+                  srcset="
+                    ./images/desktop/tom-desk.jpg     1x,
+                    ./images/desktop/tom-desk-@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/tom-tab.jpg     1x,
+                    ./images/tab/tom-tab-@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/tom-mobile.jpg     1x,
+                    ./images/mobile/tom-mobile-@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/mobile/tom-mobile.jpg" alt="Tom photo" />
+              </picture>
               <div class="team-member-details">
                 <h3 class="team-member-name">Tom Ford</h3>
                 <p class="team-member-position">Frontend Developer</p>
@@ -226,12 +266,33 @@
               </div>
             </li>
             <li class="team-member">
-              <img
-                src="./images/camila.jpg"
-                alt="Camila Garcia photo"
-                width="264"
-                height="260"
-              />
+              <picture class="team-member-picture">
+                <source
+                  srcset="
+                    ./images/desktop/camila-desk.jpg     1x,
+                    ./images/desktop/camila-desk-@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/camila-tab.jpg     1x,
+                    ./images/tab/camila-tab-@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/camila-mobile.jpg     1x,
+                    ./images/mobile/camila-mobile-@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mobile/camila-mobile.jpg"
+                  alt="Camila photo"
+                />
+              </picture>
               <div class="team-member-details">
                 <h3 class="team-member-name">Camila Garcia</h3>
                 <p class="team-member-position">Marketing</p>
@@ -268,12 +329,33 @@
               </div>
             </li>
             <li class="team-member">
-              <img
-                src="./images/daniel.jpg"
-                alt="Daniel Wilson photo"
-                width="264"
-                height="260"
-              />
+              <picture class="team-member-picture">
+                <source
+                  srcset="
+                    ./images/desktop/daniel-desk.jpg     1x,
+                    ./images/desktop/daniel-desk-@2x.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/tab/daniel-tab.jpg     1x,
+                    ./images/tab/daniel-tab-@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/daniel-mobile.jpg     1x,
+                    ./images/mobile/daniel-mobile-@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mobile/daniel-mobile.jpg"
+                  alt="Daniel photo"
+                />
+              </picture>
               <div class="team-member-details">
                 <h3 class="team-member-name">Daniel Wilson</h3>
                 <p class="team-member-position">UI Designer</p>
@@ -316,7 +398,7 @@
       <!------------------------------------------------->
       <!-- ----------PORTFOLIO SECTION------------------->
 
-      <section id="portfolio" class="portfolio">
+      <!-- <section id="portfolio" class="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -443,15 +525,15 @@
             </li>
           </ul>
         </div>
-      </section>
+       </section>  -->
     </main>
 
     <!--------------------------------------->
     <!-- ----------FOOTER------------------->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
-        <!-- Logo of the site -->
+      
         <div class="footer-first-wrapper">
           <a class="footer-logo" href="./index.html"
             >Web<span class="footer-logo-second-part">Studio</span></a
@@ -493,10 +575,10 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
 
-        <!-- ----------SUBSCRIBE FIELD------------------->
-
+    <!-- ----------SUBSCRIBE FIELD------------------->
+    <!-- 
         <div class="subscribe-wrapper">
           <p class="subscribe-title">Subscribe</p>
           <form class="subscribe-form" name="subscribe-form">
@@ -517,12 +599,12 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!--------------------------------------->
     <!-- ----------FORM------------------->
 
-    <div class="modal-overlay">
+    <!-- <div class="modal-overlay">
       <div class="modal-form">
         <button type="button" class="close-button">
           <svg class="form-icon-close" width="8" height="8">
@@ -530,9 +612,9 @@
           </svg>
         </button>
         <p class="form-title">Leave your contacts and we will call you back</p>
-        <form class="form" name="your_contacts" autocomplete="off">
-          <!-- ---------------USER NAME FIELD---------------->
-          <div class="modal-field">
+        <form class="form" name="your_contacts" autocomplete="off"> -->
+    <!-- ---------------USER NAME FIELD---------------->
+    <!-- <div class="modal-field">
             <label for="user-name" class="form-label">Name</label>
             <div class="form-field-wrap">
               <input
@@ -545,11 +627,11 @@
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
             </div>
-          </div>
+          </div> -->
 
-          <!-- ---------------PHONE NUMBER FIELD---------------->
+    <!-- ---------------PHONE NUMBER FIELD---------------->
 
-          <div class="modal-field">
+    <!-- <div class="modal-field">
             <label for="user-phone" class="form-label">Phone</label>
             <div class="form-field-wrap">
               <input
@@ -562,11 +644,11 @@
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
             </div>
-          </div>
+          </div> -->
 
-          <!-- ---------------USER EMAIL FIELD---------------->
+    <!-- ---------------USER EMAIL FIELD---------------->
 
-          <div class="modal-field">
+    <!-- <div class="modal-field">
             <label for="user-email" class="form-label">Email</label>
             <div class="form-field-wrap">
               <input
@@ -579,11 +661,11 @@
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
             </div>
-          </div>
+          </div> -->
 
-          <!-- ----------COMMENT FIELD IN FORM---------->
+    <!-- ----------COMMENT FIELD IN FORM---------->
 
-          <div class="comment-field">
+    <!-- <div class="comment-field">
             <label for="user-comment" class="form-label">Comment</label>
             <textarea
               id="user-comment"
@@ -591,11 +673,11 @@
               class="form-comment"
               placeholder="Text input"
             ></textarea>
-          </div>
+          </div> -->
 
-          <!-- ----------CHECKBOX USER PRIVACY---------->
+    <!-- ----------CHECKBOX USER PRIVACY---------->
 
-          <div class="check-field">
+    <!-- <div class="check-field">
             <input
               type="checkbox"
               class="input-check visually-hidden"
@@ -616,6 +698,6 @@
           <button type="submit" class="send-button">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
