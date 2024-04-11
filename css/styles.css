@@ -1041,6 +1041,9 @@ button {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .portfolio-item-overlay {
+    display: block;
+  }
   /* Tablet Footer */
   .footer {
     padding: 96px 0 96px 108px;
@@ -1289,6 +1292,9 @@ button {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .portfolio-item-overlay {
+    display: block;
+  }
   /* Desktop Footer */
   .footer {
     padding: 100px 0;
