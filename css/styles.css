@@ -132,7 +132,7 @@ button {
   margin: 0 auto;
 }
 
-@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
         to bottom,
@@ -984,7 +984,7 @@ button {
     padding: 112px 0;
   }
 
-  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(
           to bottom,
@@ -1142,7 +1142,7 @@ button {
     padding: 188px 0;
   }
 
-  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(
           to bottom,
