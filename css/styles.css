@@ -155,11 +155,23 @@ button {
   height: 24px;
   border-radius: 50%;
   background-color: transparent;
+  cursor: pointer;
   border: 1px solid #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-close-button:focus,
+.burger-close-button:active {
+  background-color: #404bbf;
+  fill: #ffffff;
+  border: none;
 }
 
 .burger-nav {
 }
+
 .burger-nav-list {
   display: flex;
   flex-direction: column;
