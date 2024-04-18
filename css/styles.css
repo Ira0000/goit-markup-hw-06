@@ -314,7 +314,7 @@ button {
   overflow: hidden;
 }
 .portfolio-item-overlay {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -669,7 +669,6 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* -------------------------------------------*/
 /* ----------------COMMENT FIELD IN FORM-------*/
 
 .comment-field {
@@ -688,7 +687,6 @@ button {
   color: rgba(46, 47, 66, 0.4);
   height: 120px;
   padding: 8px 16px;
-  caret-color: #2e2f42;
   resize: none;
   background-color: transparent;
   outline: transparent;
@@ -702,6 +700,7 @@ button {
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
+  opacity: 0.5;
   color: rgba(46, 47, 66, 0.4);
 }
 
@@ -862,8 +861,10 @@ button {
 .burger-socials {
 }
 .burger-socials-list {
+  max-width: 280px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 .burger-socials-item {
 }
@@ -881,7 +882,7 @@ button {
 }
 
 /* ---------MEDIA RULES FOR TABLET----------- */
-@media (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
@@ -1043,9 +1044,6 @@ button {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .portfolio-item-overlay {
-    display: block;
-  }
   /* Tablet Footer */
   .footer {
     padding: 96px 0 96px 108px;
@@ -1110,7 +1108,7 @@ button {
 
 /* ---------MEDIA RULES FOR DESKTOP----------- */
 
-@media (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -1122,89 +1120,14 @@ button {
     padding-right: 15px;
   }
 
-  .header-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .header-nav {
-    margin-right: auto;
-    padding: 0;
-  }
-
-  .header-logo {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .burger-button {
-    display: none;
-  }
-
-  .header-menu {
-    display: flex;
-    gap: 40px;
-  }
-  .header-menu-link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .header-menu-link:hover,
-  .header-menu-link:focus {
-    color: #404bbf;
-  }
-
-  .header-menu-item .current {
-    position: relative;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding: 24px 0;
-    color: #404bbf;
-  }
-
-  .header-menu-item .current::after {
-    position: absolute;
-    color: #404bbf;
-    content: '';
-    width: 100%;
-    left: 0;
-    bottom: -1px;
-    display: block;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #404bbf;
-  }
-
-  .contacts {
-    display: block;
-    font-style: normal;
-  }
   .contacts-list {
-    display: flex;
     flex-direction: row;
     gap: 40px;
   }
 
   .contact-list-link {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .contact-list-link:hover,
-  .contact-list-link:focus {
-    color: #404bbf;
   }
 
   /* ----Main---- */
@@ -1231,14 +1154,10 @@ button {
   }
 
   .hero-title {
-    font-size: 56px;
-    line-height: 1.07;
-    max-width: 496px;
     margin-bottom: 48px;
   }
 
   .advantages-list {
-    flex-direction: row;
     gap: 24px;
     row-gap: 72px;
   }
@@ -1264,7 +1183,6 @@ button {
   }
 
   .advantages-list-title {
-    text-align: left;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -1277,13 +1195,15 @@ button {
   }
 
   .team-list {
-    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 24px;
   }
 
+  .team-member {
+    width: calc((100% - 72px) / 4);
+  }
+
   .portfolio-list {
-    flex-direction: row;
-    flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
   }
@@ -1291,77 +1211,38 @@ button {
   .portfolio-item {
     width: calc((100% - 48px) / 3);
     box-shadow: none;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .portfolio-item-overlay {
-    display: block;
-  }
   /* Desktop Footer */
   .footer {
     padding: 100px 0;
+  }
+
+  .footer-container {
+    gap: 0;
   }
 
   .footer-first-wrapper {
     margin-right: 120px;
   }
 
-  .footer-container {
-    padding: 0;
-    flex-direction: row;
-    gap: 0;
-  }
-
-  .footer-first-wrapper {
-    max-width: 264px;
-  }
-
-  .footer-logo {
-    max-width: 100%;
-    display: inline-block;
-    margin-bottom: 16px;
-    margin-left: 0;
-  }
-
   .socials-second-wrapper {
-    max-width: 208px;
-    align-self: baseline;
     margin-right: 80px;
-  }
-
-  .socials-title {
-    text-align: left;
   }
 
   .subscribe-wrapper {
     align-self: baseline;
-    /* max-width: 453px; */
-  }
-
-  .subscribe-title {
-    text-align: left;
   }
 
   .subscribe-form {
-    flex-direction: row;
     gap: 24px;
   }
 
   .subscribe-field {
-    width: 264px;
     opacity: unset;
   }
 
   .subscribe-button {
-    min-width: 165px;
     margin: 0;
-  }
-
-  /* ------Desktop and Tablet Modal Form------ */
-
-  .modal-form {
-    width: 408px;
-    min-height: 584px;
-    padding: 72px 24px 24px 24px;
   }
 }
